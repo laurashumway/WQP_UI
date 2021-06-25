@@ -55,7 +55,7 @@ The WQP can be searched through three different search options:
 
 > *Web Services Request:* Counties can be directly entered into the URL through their [FIPS county code](https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/fipspub6-4.pdf). For Adams and Clay counties in Iowa: ```#countycode=US%3A19%3A003&countycode=US%3A19%3A041```
 
-***Point Location*** - Enter *latitude*, *longitude*, and *radial distance* to create a ***search area***. Distance should be entered in **miles**. Latitude and longitude should be entered in **decimal degrees** relative to the NAD83 datum. Longitudes in the western hemisphere should begin with a negative sign. Many stations outside the continental US do not have latitude and longitude referenced to NAD83 and therefore cannot be found using these parameters.
+***Point Location*** - Enter *latitude* and *longitude* (**decimal degrees** referenced to NAD83), and *radial distance* (**miles**) to create a ***search area***. Longitudes in the western hemisphere begin with a negative sign. Many stations outside the continental US do not have latitude and longitude referenced to NAD83 and cannot be found using these parameters.
 
 > *Example:* 20 miles from latitude 46.12 degrees N, longitude 89.15 degrees W would be entered as:
 > * Distance: 20
@@ -65,7 +65,7 @@ The WQP can be searched through three different search options:
 <details>
   <summary>Advanced Location Parameters</summary>
 
-***Bounding Box*** - Enter the North and South *latitudes* and the East and West *longitudes* to create a ***bounding box***. Latitude and Longitude should be entered in **decimal degrees** relative to the NAD83 datum. Longitudes in the western hemisphere should begin with a negative sign.
+***Bounding Box*** - Enter the North and South *latitudes* and the East and West *longitudes* (**decimal degrees** referenced to NAD83) to create a ***bounding box***. Longitudes in the western hemisphere should begin with a negative sign.
 
 > *Example:*
 > * North: 46.12
@@ -166,9 +166,15 @@ The nomenclature for USEPA and USGS characteristics are **not** identical.
 Small differences in naming may cause chemically identical characteristics to be listed under different names or names that are formatted differently. 
 > *Example:* *1,4-dichlorobenzene* may be listed as *"1,4-dichlorobenzene"*, *"p-dichlorobenzene"*, or *both*. A user desiring all *1,4-dichlorobenzene* data would need to select **both** names (and variants thereof) to retrieve the results.
 
-***Project ID*** - Uniquely identifies a data collection project. Use the **project ID window** to select one or multiple project IDs. Parentheses after each project ID represent which database it is represented in. 
+***Project ID*** - Uniquely identifies a ***data collection project***. Use the **project ID window** to select one or multiple project IDs. Parentheses after each project ID represent which database it is represented in. 
 
-***Parameter Code*** - Identifies a characteristic using [NWIS codes](https://nwis.waterdata.usgs.gov/usa/nwis/pmcodes). Use the **parameter code window** to select one or multiple parameter codes. Specifying a parameter code will limit the query to ***NWIS only***.
+***Parameter Code*** - Identifies a characteristic using [***NWIS codes***](https://nwis.waterdata.usgs.gov/usa/nwis/pmcodes). Use the **parameter code window** to select one or multiple parameter codes. Specifying a parameter code will limit the query to ***NWIS only***.
+
+***Biological sampling parameters*** - Filter by parameters specific to ***biological organisms***: assemblage and taxonomic name. 
+
+>***Assemblage*** - An association of ***interacting populations*** of organisms in a given water body. *Example:* macroinvertabrates and fish/nekton.
+
+>***Taxonomic Name*** - ***Genus name, species name*** in binomial nomenclature. *Example:* for shovelnose strugeon, *Scaphirhyncus platorynchus*.
 
 </details>
 
@@ -178,17 +184,23 @@ Small differences in naming may cause chemically identical characteristics to be
 <details>
   <summary>Expand Parameters</summary>
 
-***Data Source*** - Select one or multiple databases from which the data will be retrieved. If no selection is made, all databases will be searched.
+***Date Range*** - ***Start*** and ***end dates*** to be used individually or together. Dates must be entered in *MM-DD-YYYY* format.
 
-***Date Range*** - Start and end dates to be used individually or together. Dates must be entered in MM-DD-YYYY format.
+***Minimum sampling activities per site*** - Returns only sites where at least a ***minimum number*** of sampling activities have been reported. Use the **minimum number window** to select a value; the default is **1**.
+
+***Minimum result per site*** - Returns only sites where at least a ***minimum number*** of results have been reported. Use the **minimum results window** to select a value; the default is **1**.
 
 </details>
 
-#### **MAPPING SITES**
+#### **DOWNLOAD THE DATA**
 <details>
   <summary>Expand Section</summary>
 
-To see the locations of sites before downloading the data, click the *"Show sites on map"* button, up to 250,000 sites.  Sites are color coded by data source. 
+***Data Source*** - Select one or multiple ***databases*** from which the data will be retrieved. **All** databases are searched by default.
+
+***Data to Download*** - ***Water monitoring data*** is delivered in a format and nomenclature defined by the [WQX-Outbound Schema](http://www.exchangenetwork.net/schema/WQX/2/WQX_DET_v2.1b.xls). *Metadata* on these formats is displayed in ***Tables 4-12***.
+
+***Show Sites on Map*** - Previews the ***locations of sites*** **before** downloading the data, up to 250,000 sites. Sites are color coded by data source. 
 
 The example below displays part of the South Skunk watershed, with NWIS, EPA, and STEWARDS sites.
 
@@ -202,13 +214,7 @@ The Water Quality Portal only provides discrete monitoring data. To see USGS lon
 
 ![NWIS Stream Gages](/server/wqp/markdownTextFiles/img/portal_userguide_image3.png)
 
-</details>
-
-#### **FILE FORMAT**
-<details>
-  <summary>Expand Section</summary>
-
-Choose a file format to download the result set. Four available formats are listed and described in ***Table 3***.
+***File Format*** - Choose a ***file format*** to download the result set. Four available formats are listed and described in ***Table 3***.
 
 #### ***Table 3.* Available file formats**
 <details>
@@ -223,13 +229,15 @@ Choose a file format to download the result set. Four available formats are list
 
 </details>
 
+***Sort Data*** - ***Sorts data*** by *organization*, *monitoringLocationID*, and *activityID*. Sorting **increases** response time. If you are manually sorting, set **sorted=no**. The sorted document is delivered in the WQX standard.
+
 </details>
 
 ### **Explanation of data retrievals**
 
 Water monitoring data is delivered in a format and nomenclature defined by the [WQX-Outbound Schema](http://www.exchangenetwork.net/schema/WQX/2/WQX_DET_v2.1b.xls). 
 
-Under *"DATA SOURCE"*, the data can be retrieved in the following formats:
+Under *"DOWNLOAD DATA"*, the data can be retrieved in the following formats:
 
 * [Site Data Only](/server/wqp/markdownTextFiles/portal_userguide.md#table-4-site-data-only-result-retrieval-metadata)
 * [Project Data Only](/server/wqp/markdownTextFiles/portal_userguide.md#table-5-project-data-only-result-retrieval-metadata)

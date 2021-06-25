@@ -23,8 +23,7 @@
                 <div class="grid-row grid-gap">
                   <div class="tablet:grid-col">
                     <div class="form-group">
-                      <label for="countrycode" class="tooltip" :title="countryTooltip">Select one or multiple
-                        countries:</label>
+                      <label for="countrycode" class="tooltip" :title="countryTooltip">Country:</label>
                       <div>
                         <select multiple class="form-control" id="countrycode" name="countrycode" data-placeholder="All"
                           style="width: 100%"></select>
@@ -135,14 +134,14 @@
                         <label class="control-label" for="siteType">Site Type:</label>
                         <div>
                           <select multiple id="siteType" name="siteType" data-placeholder="All"
-                            style="width: 100%"></select>
+                            style="width: 90%"></select>
                         </div>
                       </div>
-                      <div id="organization-id-select" :title="orgIDTooltip">
+                      <div class="tooltip" :title="orgIDTooltip">
                         <label class="control-label" for="organization">Organization ID:</label>
                         <div>
-                          <select multiple name="organization" id="organization"
-                            data-placeholder="All" style="width: 100%"></select>
+                          <select multiple id="organization" name="organization"
+                            data-placeholder="All" style="width: 84%"></select>
                         </div>
                       </div>
                       <div class="tooltip" data-position="right" :title="siteIDTooltip">
@@ -167,12 +166,6 @@
                         <div>
                           Examples: 01010003;01010004 010801*
                           01010003;010801*;01010005
-                        </div>
-                      </div>
-                      <div class="tooltip" id="min-activities-div" :title="minSamplingTooltip">
-                        <label class="control-label" for="min-activities">Minimum sampling activities per site:</label>
-                        <div>
-                          <input class="form-control" type="number" min="1" name="minactivities" id="min-activities" />
                         </div>
                       </div>
                     </div>
@@ -218,39 +211,10 @@
                                     data-multiple="true" />
                                 </div>
                               </div>
-                              <div class="tooltip" id="minresults-div" :title="minimumResultsTooltip">
-                                <label class="control-label" for="minresults">Minimum results per site:</label>
-                                <div>
-                                  <input class="form-control usa-label" type="number" min="1" name="minresults"
-                                    id="minresults" />
-                                </div>
-                              </div>
-                              <div id="date-row">
-                                <div id="start-date-select">
-                                  <label class="control-label" for="startDateLo">Date range - from:</label>
-                                  <div>
-                                    <div>
-                                      <input class="form-control usa-label" type="text" id="startDateLo"
-                                        name="startDateLo" placeholder="mm-dd-yyyy" />
-                                    </div>
-                                  </div>
-                                </div>
-                                <div id="end-date-select">
-                                  <label class="control-label" for="startDateHi">to:</label>
-                                  <div>
-                                    <div>
-                                      <input class="form-control usa-label" type="text" id="startDateHi"
-                                        name="startDateHi" placeholder="mm-dd-yyyy" />
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
                           <div id="biological" class="subpanel">
                             <div class="tooltip" :title="bioSamplingTooltip">
                             <div class="subpanel-heading">
-                              Biological sampling parameters:
+                              Biological Sampling Parameters:
                             </div>
                           </div>
                             <div class="subpanel-body">
@@ -271,7 +235,6 @@
                               </div>
                             </div>
                           </div>
-                          
                         </div>
                       </div>
                     </div>
@@ -285,10 +248,69 @@
           <div class="usa-accordion">
             <h4 class="usa-accordion__heading">
               <button class="usa-accordion__button" aria-expanded="true" aria-controls="a3">
-                Download the Data
+                Filter Results
               </button>
             </h4>
             <div id="a3" class="usa-accordion__content usa-prose">
+              <div>
+                <div id="filter-box" class="grid-row grid-gap">
+                  <div id="filter-box-input-div" class="grid-row grid-gap">
+                    <div id="date-row-parameters-div" class="tablet:grid-col-4">
+                      <div id="date-row">
+                        <div id="start-date-select">
+                          <div class="tooltip" :title="dateRangeTooltip">
+                            <label for="startDateLo">Date range - from:</label>
+                          </div>
+                              <div>
+                                <div>
+                                  <input class="form-control usa-label" type="text" id="startDateLo"
+                                  name="startDateLo" placeholder="mm-dd-yyyy" />
+                                </div>
+                              </div>
+                            </div>
+                        <div id="end-date-select">
+                          <label class="control-label" for="startDateHi">to:</label>
+                          <div>
+                            <div>
+                              <input class="form-control usa-label" type="text" id="startDateHi"
+                                name="startDateHi" placeholder="mm-dd-yyyy" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                      <div id="min-activities-parameters-div" class="tablet:grid-col-4">
+                        <div class="tooltip" id="min-activities-div" :title="minSamplingTooltip">
+                          <label class="control-label" for="min-activities">Minimum sampling activities per site:</label>
+                          <div>
+                            <input class="form-control" type="number" min="1" name="minactivities" id="min-activities" />
+                          </div>
+                        </div>
+                      </div>
+                      <div id="min-results-parameters-div" class="tablet:grid-col-4">
+                        <div class="tooltip" id="minresults-div" :title="minimumResultsTooltip">
+                          <label class="control-label" for="minresults">Minimum results per site:</label>
+                          <div>
+                            <input class="form-control usa-label" type="number" min="1" name="minresults"
+                              id="minresults" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-col">
+          <div class="usa-accordion">
+            <h4 class="usa-accordion__heading">
+              <button class="usa-accordion__button" aria-expanded="true" aria-controls="a4">
+                Download the Data
+              </button>
+            </h4>
+            <div id="a4" class="usa-accordion__content usa-prose">
               <div>
                 <div id="download-box" class="grid-row grid-gap">
                   <div id="download-box-input-div" class="grid-row grid-gap">
@@ -296,10 +318,9 @@
                       <div class="panel-body">
                         <div class="form-group">
                           <fieldset class="usa-fieldset">
-                            <legend class="usa-legend"
-                              title="Click in box and select one or more sources, otherwise data will be retrieved from all available providers">
-                              Select one or many:
-                            </legend>
+                            <div class="tooltip" :title="databasesTooltip">
+                              <label for="dataSource">Data Source:</label>
+                            </div>
                             <div class="usa-checkbox">
                               <input class="datasources usa-checkbox__input" id="nwis" type="checkbox" name="providers"
                                 value="NWIS" checked />
@@ -321,9 +342,9 @@
                     </div>
                     <div id="download-data-kind-box" class="tablet:grid-col-5">
                       <fieldset class="usa-fieldset">
-                        <legend class="usa-legend usa-legend">
-                          Select data to download:
-                        </legend>
+                        <div class="tooltip" :title="dataDownloadTooltip">
+                          <label for="dataSource">Data to Download:</label>
+                        </div>
                         <div class="usa-radio">
                           <input class="result-type usa-radio__input" id="organization" type="radio"
                             value="Organization" />
@@ -384,7 +405,7 @@
                         <div id="map-ops-button-div" class="form-inline">
                           <div id="show-on-map-button-div" class="form-group">
                             <button type="button" class="usa-button usa-button--outline" id="show-on-map-button">
-                              Show sites on map
+                              Show Sites on Map
                             </button>
                           </div>
                           <div id="sld-select-div" class="usa-label">
@@ -412,9 +433,9 @@
                       </div>
                       <div id="download-tabular-data">
                         <fieldset class="usa-fieldset">
-                          <legend class="usa-legend usa-legend">
-                            Select one File format:
-                          </legend>
+                          <div class="tooltip" :title="fileFormatTooltip">
+                            <label for="dataSource">File Format:</label>
+                          </div>
                           <div class="usa-radio">
                             <input class="usa-radio__input" id="csv" type="radio" name="mimeType" value="csv"
                               checked="checked" />
@@ -432,7 +453,9 @@
                       </div>
                       <div id="download-sorted-data-div">
                         <input type="checkbox" id="sorted" />
-                        <label for="sorted">Sort data</label>
+                        <div class="tooltip" :title="sortDataTooltip">
+                          <label class="control-label" for="organization">Sort data</label>
+                        </div>
                       </div>
                       <input type="hidden" name="zip" id="zip" value="yes" />
                       <input type="hidden" name="sorted" id="hidden-sorted" value="no" />

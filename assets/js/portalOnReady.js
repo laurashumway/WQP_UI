@@ -34,6 +34,11 @@ $(document).ready(function () {
             assemblageTooltip: TOOLTIP.assemblageTooltip,
             taxNameTooltip: TOOLTIP.taxNameTooltip,
             showAGOLTooltip: TOOLTIP.showAGOLTooltip,
+            sortDataTooltip: TOOLTIP.sortDataTooltip,
+            dateRangeTooltip: TOOLTIP.dateRangeTooltip,
+            databasesTooltip: TOOLTIP.databasesTooltip,
+            dataDownloadTooltip: TOOLTIP.dataDownloadTooltip,
+            fileFormatTooltip: TOOLTIP.fileFormatTooltip,
         },
         methods: {
             createTooltips: function () {
