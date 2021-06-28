@@ -23,21 +23,21 @@
                 <div class="grid-row grid-gap">
                   <div class="tablet:grid-col">
                     <div class="form-group">
-                      <label for="countrycode" class="tooltip" :title="countryTooltip">Country:</label>
+                      <label for="countrycode" class="tooltip" :title="countryTooltip"><strong>Country</strong></label>
                       <div>
                         <select multiple class="form-control" id="countrycode" name="countrycode" data-placeholder="All"
                           style="width: 100%"></select>
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="tooltip" for="statecode" :title="stateTooltip">State:</label>
+                      <label class="tooltip" for="statecode" :title="stateTooltip"><strong>State</strong></label>
                       <div>
                         <select multiple class="form-control" id="statecode" name="statecode" data-placeholder="All"
                           style="width: 100%"></select>
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="tooltip" class="control-label" for="countycode" :title="countyTooltip">County:</label>
+                      <label class="tooltip" class="control-label" for="countycode" :title="countyTooltip"><strong>County</strong></label>
                       <div>
                         <select multiple class="form-control" id="countycode" name="countycode" data-placeholder="All"
                           style="width: 100%"></select>
@@ -47,12 +47,7 @@
                   <div class="tablet:grid-col">
                     <div id="point-location">
                       <div>
-                        <label class="tooltip" :title="pointLocationTooltip">Point Location:</label>
-                        <div>
-                          Example: 20 miles from Latitude 46.12 degrees N,
-                          Longitude 89.15 degrees W would be entered as: Distance:
-                          20 Latitude: 46.12 Longitude: -89.15
-                        </div>
+                        <label class="tooltip" :title="pointLocationTooltip"><strong>Point Location</strong></label>
                       </div>
                       <div>
                         <div class="form-group">
@@ -63,13 +58,13 @@
                         </div>
                         <div id="miles-label">miles of</div>
                         <div class="form-group">
-                          <label class="control-label" for="lat">Lat:</label>
+                          <label class="control-label" for="lat">Lat</label>
                           <div>
                             <input class="form-control" type="text" name="lat" size="7" id="lat" />
                           </div>
                         </div>
                         <div class="form-group">
-                          <label class="control-label" for="long">Long:</label>
+                          <label class="control-label" for="long">Long</label>
                           <div>
                             <input class="form-control" type="text" name="long" id="long" />
                           </div>
@@ -83,7 +78,7 @@
                   </div>
                   <div class="tablet:grid-col">
                     <div id="bounding-box" class="tooltip" :title="boundingBoxTooltip">
-                      <div>Bounding Box:</div>
+                      <div><strong>Bounding Box</strong></div>
                       <div>
                         <div class="form-group">
                           <label class="control-label" for="north">North:</label>
@@ -131,41 +126,30 @@
                   <div class="grid-row grid-gap">
                     <div class="tablet:grid-col">
                       <div class="tooltip" :title="siteTypeTooltip">
-                        <label class="control-label" for="siteType">Site Type:</label>
+                        <label class="control-label" for="siteType"><strong>Site Type</strong></label>
                         <div>
                           <select multiple id="siteType" name="siteType" data-placeholder="All"
                             style="width: 90%"></select>
                         </div>
                       </div>
                       <div class="tooltip" :title="orgIDTooltip">
-                        <label class="control-label" for="organization">Organization ID:</label>
+                        <label class="control-label" for="organization"><strong>Organization ID</strong></label>
                         <div>
                           <select multiple id="organization" name="organization"
                             data-placeholder="All" style="width: 84%"></select>
                         </div>
                       </div>
                       <div class="tooltip" data-position="right" :title="siteIDTooltip">
-                        <label class="control-label" for="siteid">Site ID:</label>
+                        <label class="control-label" for="siteid"><strong>Site ID</strong></label>
                         <div>
                           <select multiple id="siteid" name="siteid" data-placeholder="All"
                             style="width: 70%"></select>
                         </div>
-                        <div>
-                          Examples: For NWIS site: USGS-301650084300701 For EPA
-                          site: R10BUNKER-CUA005-5 For multiple sites:
-                          IN002-413354086221001;USSCS-311257091521312;USEPA-414007085591501
-                          For further information about NWIS versus EPA site
-                          ids, go to the FAQs page
-                        </div>
                       </div>
                       <div class="tooltip" :title="hucTooltip">
-                        <label class="control-label" for="huc">HUC:</label>
+                        <label class="control-label" for="huc"><strong>HUC</strong></label>
                         <div>
                           <input class="form-control" type="text" name="huc" id="huc" data-multiple="true" />
-                        </div>
-                        <div>
-                          Examples: 01010003;01010004 010801*
-                          01010003;010801*;01010005
                         </div>
                       </div>
                     </div>
@@ -175,21 +159,21 @@
                           <div id="sampling" class="subpanel">
                             <div class="subpanel-body">
                               <div class="tooltip" :title="sampleMediaTooltip">
-                                <label class="control-label" for="sampleMedia">Sample Media:</label>
+                                <label class="control-label" for="sampleMedia"><strong>Sample Media</strong></label>
                                 <div>
                                   <select multiple class="form-control" name="sampleMedia" id="sampleMedia"
                                     data-placeholder="All" style="width: 100%"></select>
                                 </div>
                               </div>
                               <div class="tooltip" :title="charGroupTooltip">
-                                <label class="control-label" for="characteristicType">Characteristic Group:</label>
+                                <label class="control-label" for="characteristicType"><strong>Characteristic Group</strong></label>
                                 <div>
                                   <select multiple class="form-control" name="characteristicType" id="characteristicType"
                                     data-placeholder="All" style="width: 100%"></select>
                                 </div>
                               </div>
                               <div class="tooltip" :title="characteristicsTooltip">
-                                <label class="control-label" for="characteristicName">Characteristics:</label>
+                                <label class="control-label" for="characteristicName"><strong>Characteristics</strong></label>
                                 <div>
                                   <select multiple class="form-control" name="characteristicName" id="characteristicName"
                                     data-placeholder="All" style="width: 100%"></select>
@@ -197,14 +181,14 @@
                               </div>
   
                               <div class="tooltip" :title="projectIDTooltip">
-                                <label class="control-label" for="project-code">Project ID:</label>
+                                <label class="control-label" for="project-code"><strong>Project ID</strong></label>
                                 <div>
                                   <select multiple class="form-control" name="project" id="project-code"
                                     data-placeholder="All" style="width: 100%"></select>
                                 </div>
                               </div>
                               <div class="tooltip" id="pcode-div" :title="paramCodeTooltip">
-                                <label class="control-label" for="pCode">Parameter Code:
+                                <label class="control-label" for="pCode"><strong>Parameter Code</strong>
                                   <span style="font-size: x-small">(NWIS ONLY)</span></label>
                                 <div>
                                   <input class="form-control usa-label" type="text" name="pCode" id="pCode"
@@ -214,20 +198,20 @@
                           <div id="biological" class="subpanel">
                             <div class="tooltip" :title="bioSamplingTooltip">
                             <div class="subpanel-heading">
-                              Biological Sampling Parameters:
+                              <strong>Biological Sampling Parameters</strong>
                             </div>
                           </div>
                             <div class="subpanel-body">
                               <div class="tooltip" :title="assemblageTooltip">
-                                <label for="assemblage">Assemblage:</label>
+                                <label for="assemblage"><strong>Assemblage</strong></label>
                                 <div>
                                   <select multiple name="assemblage" id="assemblage"
                                     data-placeholder="All" style="width: 100%"></select>
                                 </div>
                               </div>
                               <div class="form-group">
-                                <label class="tooltip" for="subjectTaxonomicName" :title="taxNameTooltip">Taxonomic
-                                  Name:</label>
+                                <label class="tooltip" for="subjectTaxonomicName" :title="taxNameTooltip"><strong>Taxonomic
+                                  Name</strong></label>
                                 <div>
                                   <select multiple name="subjectTaxonomicName" aria-label="Select a taxonomic name"
                                     id="subject-taxonomic-name" data-placeholder="All" style="width: 100%"></select>
@@ -259,7 +243,7 @@
                       <div id="date-row">
                         <div id="start-date-select">
                           <div class="tooltip" :title="dateRangeTooltip">
-                            <label for="startDateLo">Date range - from:</label>
+                            <label for="startDateLo"><strong>Date range</strong> - from:</label>
                           </div>
                               <div>
                                 <div>
@@ -281,7 +265,7 @@
                     </div>
                       <div id="min-activities-parameters-div" class="tablet:grid-col-4">
                         <div class="tooltip" id="min-activities-div" :title="minSamplingTooltip">
-                          <label class="control-label" for="min-activities">Minimum sampling activities per site:</label>
+                          <label class="control-label" for="min-activities"><strong>Minimum sampling activities per site</strong></label>
                           <div>
                             <input class="form-control" type="number" min="1" name="minactivities" id="min-activities" />
                           </div>
@@ -289,7 +273,7 @@
                       </div>
                       <div id="min-results-parameters-div" class="tablet:grid-col-4">
                         <div class="tooltip" id="minresults-div" :title="minimumResultsTooltip">
-                          <label class="control-label" for="minresults">Minimum results per site:</label>
+                          <label class="control-label" for="minresults"><strong>Minimum results per site</strong></label>
                           <div>
                             <input class="form-control usa-label" type="number" min="1" name="minresults"
                               id="minresults" />
@@ -302,7 +286,6 @@
               </div>
             </div>
           </div>
-        </div>
         <div class="grid-col">
           <div class="usa-accordion">
             <h4 class="usa-accordion__heading">
@@ -315,11 +298,11 @@
                 <div id="download-box" class="grid-row grid-gap">
                   <div id="download-box-input-div" class="grid-row grid-gap">
                     <div id="data-type-parameters-div" class="tablet:grid-col-3">
-                      <div class="panel-body">
-                        <div class="form-group">
+                      <div id="databases-row">
+                        <div id="select">
                           <fieldset class="usa-fieldset">
                             <div class="tooltip" :title="databasesTooltip">
-                              <label for="dataSource">Data Source:</label>
+                              <label for="dataSource"><strong>Data Source</strong></label>
                             </div>
                             <div class="usa-checkbox">
                               <input class="datasources usa-checkbox__input" id="nwis" type="checkbox" name="providers"
@@ -341,10 +324,10 @@
                       </div>
                     </div>
                     <div id="download-data-kind-box" class="tablet:grid-col-5">
+                      <div class="tooltip" id="download-data-div" :title="dataDownloadTooltip">
+                        <label class="control-label" for="dataSource"><strong>Data to Download</strong></label>
+                      </div>
                       <fieldset class="usa-fieldset">
-                        <div class="tooltip" :title="dataDownloadTooltip">
-                          <label for="dataSource">Data to Download:</label>
-                        </div>
                         <div class="usa-radio">
                           <input class="result-type usa-radio__input" id="organization" type="radio"
                             value="Organization" />
@@ -409,7 +392,7 @@
                             </button>
                           </div>
                           <div id="sld-select-div" class="usa-label">
-                            <label>Style sites:&nbsp;</label>
+                            <label><strong>Style sites</strong>&nbsp;</label>
                             <select id="sld-select-input" class="usa-select">
                               {% for sld in config.SITE_SLDS %}
                               <option value="{{ sld.id }}" {% if loop.first %}checked{% endif %}>
@@ -426,15 +409,11 @@
                           </div>
                           <div id="map-popover" title="Detailed site information" data-trigger="focus"></div>
                         </div>
-                        <div id="query-map-legend-div">
-                          <div class="legend-header">Sites Legend</div>
-                          <div class="legend-container"></div>
-                        </div>
                       </div>
                       <div id="download-tabular-data">
                         <fieldset class="usa-fieldset">
                           <div class="tooltip" :title="fileFormatTooltip">
-                            <label for="dataSource">File Format:</label>
+                            <label for="dataSource"><strong>File Format</strong></label>
                           </div>
                           <div class="usa-radio">
                             <input class="usa-radio__input" id="csv" type="radio" name="mimeType" value="csv"
@@ -452,13 +431,13 @@
                         </fieldset>
                       </div>
                       <div id="download-sorted-data-div">
-                        <input type="checkbox" id="sorted" />
+                        <input class="control-label" type="checkbox" id="sorted" />
                         <div class="tooltip" :title="sortDataTooltip">
-                          <label class="control-label" for="organization">Sort data</label>
+                          <label class="control-label" for="sorted"><strong>Sort data</strong></label>
                         </div>
-                      </div>
                       <input type="hidden" name="zip" id="zip" value="yes" />
                       <input type="hidden" name="sorted" id="hidden-sorted" value="no" />
+                      </div>
                       <div id="form-action">
                         <a href="#download-status-modal" id="main-button" class="usa-button" type="submit" aria-controls="example-modal-1">
                           DOWNLOAD
@@ -494,7 +473,7 @@
                         </div>
                         <div class="share-container" style="padding-top: 5px;">
                           <button type="button" class="usa-button usa-button--outline">
-                            Share Page
+                            Copy Current URL
                           </button>
                           <!-- <textarea class="usa-textarea" readonly rows="3"></textarea> -->
                         </div>
@@ -503,6 +482,17 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-col">
+          <div class="usa-accordion">
+            <h4 class="usa-accordion__heading">
+              <button class="usa-accordion__button" aria-expanded="true" aria-controls="a5">
+                Show Queries
+              </button>
+            </h4>
+            <div id="a5" class="usa-accordion__content usa-prose">
               <div id="show-queries-div" class="grid-col">
                 <a href="#arcgis-online-modal" class="usa-button usa-button--outline" id="show-arcgis-online-help" type="button" aria-controls="arcgis-online-modal" data-open-modal>
                   Show ArcGIS Online Parameters

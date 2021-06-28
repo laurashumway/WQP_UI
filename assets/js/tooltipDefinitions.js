@@ -25,6 +25,6 @@ export class TOOLTIP {
     static get sortDataTooltip() { return '<strong><em>Sorts data</em></strong> by <em>organization</em>, <em>monitoringLocationID</em>, and <em>activityID</em>. Sorting <strong>increases</strong> response time. If you are manually sorting, set <strong>sorted=no</strong>. The sorted document is delivered in the WQX standard.';}
     static get dateRangeTooltip() { return '<strong><em>Start</strong></em> and <strong><em>end dates</strong></em> to be used individually or together. Dates must be entered in <em>MM-DD-YYYY</em> format.'}
     static get databasesTooltip() { return 'Select one or multiple <strong><em>databases</strong></em> from which the data will be retrieved. <strong>All</strong> databases are searched by default.'}
-    static get dataDownloadTooltip() { return '<strong><em>Water monitoring data</strong></em> is delivered in a format and nomenclature defined by the <a href="http://www.exchangenetwork.net/schema/WQX/2/WQX_DET_v2.1b.xls">WQX-Outbound Schema</a>. <em>Metadata</em> on these formats is displayed in Tables 4-12 of the User Guide.'}
-    static get fileFormatTooltip() { return 'Choose a <strong><em>file format</strong></em> to download the result set.'}
+    static get dataDownloadTooltip() { return '<strong><em>Water monitoring data</strong></em> is delivered in a format and nomenclature defined by the <a href="http://www.exchangenetwork.net/schema/WQX/2/WQX_DET_v2.1b.xls">WQX-Outbound Schema</a>. <em>Metadata</em> on these formats is displayed in Tables 4-12 of the User Guide.';}
+    static get fileFormatTooltip() { return 'Choose a <strong><em>file format</strong></em> to download the result set.';}
 }
