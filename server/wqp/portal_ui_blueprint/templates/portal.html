@@ -286,6 +286,7 @@
               </div>
             </div>
           </div>
+      <div id="downloadParams">
         <div class="grid-col">
           <div class="usa-accordion">
             <h4 class="usa-accordion__heading">
@@ -296,14 +297,13 @@
             <div id="a4" class="usa-accordion__content usa-prose">
               <div>
                 <div id="download-box" class="grid-row grid-gap">
-                  <div id="download-box-input-div" class="grid-row grid-gap">
                     <div id="data-type-parameters-div" class="tablet:grid-col-3">
                       <div id="databases-row">
                         <div id="select">
+                          <div class="tooltip" :title="databasesTooltip">
+                            <label for="dataSource"><strong>Data Source</strong></label>
+                          </div>
                           <fieldset class="usa-fieldset">
-                            <div class="tooltip" :title="databasesTooltip">
-                              <label for="dataSource"><strong>Data Source</strong></label>
-                            </div>
                             <div class="usa-checkbox">
                               <input class="datasources usa-checkbox__input" id="nwis" type="checkbox" name="providers"
                                 value="NWIS" checked />
@@ -327,6 +327,7 @@
                       <div class="tooltip" id="download-data-div" :title="dataDownloadTooltip">
                         <label class="control-label" for="dataSource"><strong>Data to Download</strong></label>
                       </div>
+                      <div class="form-group">
                       <fieldset class="usa-fieldset">
                         <div class="usa-radio">
                           <input class="result-type usa-radio__input" id="organization" type="radio"
@@ -382,6 +383,7 @@
                           <label class="usa-radio__label" for="biologicalHabitatMetric">Biological Habitat Metrics</label>
                         </div>
                       </fieldset>
+                    </div>
                     </div>
                     <div id="map-and-query-div" class="tablet:grid-col-4">
                       <div id="mapping-div" class="panel-body">
@@ -479,12 +481,12 @@
                         </div>
                       </div>
                     </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
         <div class="grid-col">
           <div class="usa-accordion">
             <h4 class="usa-accordion__heading">
