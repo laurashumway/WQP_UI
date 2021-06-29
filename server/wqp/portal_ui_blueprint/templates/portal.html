@@ -76,7 +76,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="tablet:grid-col">
+                  <!-- bounding box (advanced)-->
+                  <!-- <div class="tablet:grid-col">
                     <div id="bounding-box" class="tooltip" :title="boundingBoxTooltip">
                       <div><strong>Bounding Box</strong></div>
                       <div>
@@ -107,7 +108,7 @@
                       </div>
                       <input type="hidden" name="bBox" />
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -132,7 +133,8 @@
                             style="width: 90%"></select>
                         </div>
                       </div>
-                      <div class="tooltip" :title="orgIDTooltip">
+                      <!-- Org ID, Site ID, and HUC (advanced) -->
+                      <!-- <div class="tooltip" :title="orgIDTooltip">
                         <label class="control-label" for="organization"><strong>Organization ID</strong></label>
                         <div>
                           <select multiple id="organization" name="organization"
@@ -151,7 +153,7 @@
                         <div>
                           <input class="form-control" type="text" name="huc" id="huc" data-multiple="true" />
                         </div>
-                      </div>
+                      </div> -->
                     </div>
                     <div class="tablet:grid-col">
                       <div id="sampling-params" class="panel panel-default">
@@ -172,7 +174,8 @@
                                     data-placeholder="All" style="width: 100%"></select>
                                 </div>
                               </div>
-                              <div class="tooltip" :title="characteristicsTooltip">
+                              <!-- Characteristics, Project ID, Parameter Code, Biological Sampling Parameters (advanced) -->
+                              <!-- <div class="tooltip" :title="characteristicsTooltip">
                                 <label class="control-label" for="characteristicName"><strong>Characteristics</strong></label>
                                 <div>
                                   <select multiple class="form-control" name="characteristicName" id="characteristicName"
@@ -218,7 +221,7 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          </div> -->
                         </div>
                       </div>
                     </div>
@@ -263,7 +266,8 @@
                         </div>
                       </div>
                     </div>
-                      <div id="min-activities-parameters-div" class="tablet:grid-col-4">
+                      <!-- Minimum (advanced) -->
+                      <!-- <div id="min-activities-parameters-div" class="tablet:grid-col-4">
                         <div class="tooltip" id="min-activities-div" :title="minSamplingTooltip">
                           <label class="control-label" for="min-activities"><strong>Minimum sampling activities per site</strong></label>
                           <div>
@@ -279,7 +283,7 @@
                               id="minresults" />
                           </div>
                         </div>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -329,17 +333,17 @@
                       </div>
                       <div class="form-group">
                       <fieldset class="usa-fieldset">
-                        <div class="usa-radio">
+                        <!-- <div class="usa-radio">
                           <input class="result-type usa-radio__input" id="organization" type="radio"
                             value="Organization" />
                           <label class="usa-radio__label" for="organization">Organization Data</label>
-                        </div>
+                        </div> -->
                         <div class="usa-radio">
                           <input checked="checked" type="radio" class="result-type usa-radio__input" id="sites"
                             type="radio" value="Station" />
                           <label class="usa-radio__label" for="sites">Site data only</label>
                         </div>
-                        <div class="usa-radio">
+                        <!-- <div class="usa-radio">
                           <input class="result-type usa-radio__input" id="projects" type="radio" value="Project" />
                           <label class="usa-radio__label" for="projects">Project data</label>
                         </div>
@@ -348,7 +352,7 @@
                             value="ProjectMonitoringLocationWeighting" />
                           <label class="usa-radio__label" for="proj-mon-weight">Project Monitoring Location Weighting
                             data</label>
-                        </div>
+                        </div> -->
                         <div class="usa-radio">
                           <input class="result-type usa-radio__input" id="samples" type="radio" value="Result" />
                           <label class="usa-radio__label" for="samples">Sample results (physical/chemical
@@ -362,7 +366,7 @@
                           <input class="result-type usa-radio__input" id="narrowsamples" type="radio" value="Result" />
                           <label class="usa-radio__label" for="narrowsamples">Sample results (narrow)</label>
                         </div>
-                        <div class="usa-radio">
+                        <!-- <div class="usa-radio">
                           <input class="result-type usa-radio__input" id="activity-input" type="radio" value="Activity" />
                           <label class="usa-radio__label" for="activity-input">Sampling Activity</label>
                         </div>
@@ -381,12 +385,12 @@
                           <input class="result-type usa-radio__input" id="biologicalHabitatMetric" type="radio"
                             value="biologicalHabitatMetric" />
                           <label class="usa-radio__label" for="biologicalHabitatMetric">Biological Habitat Metrics</label>
-                        </div>
+                        </div> -->
                       </fieldset>
                     </div>
                     </div>
                     <div id="map-and-query-div" class="tablet:grid-col-4">
-                      <div id="mapping-div" class="panel-body">
+                      <!-- <div id="mapping-div" class="panel-body">
                         <div id="map-ops-button-div" class="form-inline">
                           <div id="show-on-map-button-div" class="form-group">
                             <button type="button" class="usa-button usa-button--outline" id="show-on-map-button">
@@ -411,7 +415,7 @@
                           </div>
                           <div id="map-popover" title="Detailed site information" data-trigger="focus"></div>
                         </div>
-                      </div>
+                      </div> -->
                       <div id="download-tabular-data">
                         <fieldset class="usa-fieldset">
                           <div class="tooltip" :title="fileFormatTooltip">
@@ -487,7 +491,7 @@
           </div>
         </div>
       </div>
-        <div class="grid-col">
+        <!-- <div class="grid-col">
           <div class="usa-accordion">
             <h4 class="usa-accordion__heading">
               <button class="usa-accordion__button" aria-expanded="true" aria-controls="a5">
@@ -553,7 +557,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </form>
     </div>
   </div>
