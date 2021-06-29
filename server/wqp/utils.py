@@ -298,8 +298,6 @@ def generate_redis_db_number(provider):
         redis_db_number = 2
     elif provider == 'STEWARDS':
         redis_db_number = 3
-    elif provider == 'BIODATA':
-        redis_db_number = 4
     return redis_db_number
 
 

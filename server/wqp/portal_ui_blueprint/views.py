@@ -420,7 +420,7 @@ def taskstatus(task_id):
 @portal_ui.route('/manage_cache')
 @authentication_required_when_configured
 def manage_cache():
-    provider_list = ['NWIS', 'STORET', 'STEWARDS', 'BIODATA']
+    provider_list = ['NWIS', 'STORET', 'STEWARDS']
     status_list = []
     if redis_config:
         for provider in provider_list:
