@@ -328,19 +328,18 @@
                       </div>
                     </div>
                     <div id="download-data-kind-box" class="tablet:grid-col-5">
+                      <fieldset class="usa-fieldset">
                       <div class="tooltip" id="download-data-div" :title="dataDownloadTooltip">
                         <label class="control-label" for="dataSource"><strong>Data to Download</strong></label>
                       </div>
-                      <div class="form-group">
-                      <fieldset class="usa-fieldset">
                         <!-- <div class="usa-radio">
                           <input class="result-type usa-radio__input" id="organization" type="radio"
                             value="Organization" />
                           <label class="usa-radio__label" for="organization">Organization Data</label>
                         </div> -->
                         <div class="usa-radio">
-                          <input checked="checked" type="radio" class="result-type usa-radio__input" id="sites"
-                            type="radio" value="Station" />
+                          <input checked="checked" type="radio" class="result-type usa-radio__input" name="download" id="sites"
+                            type="radio" value="sites" />
                           <label class="usa-radio__label" for="sites">Site data only</label>
                         </div>
                         <!-- <div class="usa-radio">
@@ -354,16 +353,16 @@
                             data</label>
                         </div> -->
                         <div class="usa-radio">
-                          <input class="result-type usa-radio__input" id="samples" type="radio" value="Result" />
+                          <input class="result-type usa-radio__input" name="download" id="samples" type="radio" value="samples" />
                           <label class="usa-radio__label" for="samples">Sample results (physical/chemical
                             metadata)</label>
                         </div>
                         <div class="usa-radio">
-                          <input class="result-type usa-radio__input" id="biosamples" type="radio" value="Result" />
+                          <input class="result-type usa-radio__input" name="download" id="biosamples" type="radio" value="biosamples" />
                           <label class="usa-radio__label" for="biosamples">Sample results (biological metadata)</label>
                         </div>
                         <div class="usa-radio">
-                          <input class="result-type usa-radio__input" id="narrowsamples" type="radio" value="Result" />
+                          <input class="result-type usa-radio__input" name="download" id="narrowsamples" type="radio" value="narrowsamples" />
                           <label class="usa-radio__label" for="narrowsamples">Sample results (narrow)</label>
                         </div>
                         <!-- <div class="usa-radio">
@@ -387,7 +386,6 @@
                           <label class="usa-radio__label" for="biologicalHabitatMetric">Biological Habitat Metrics</label>
                         </div> -->
                       </fieldset>
-                    </div>
                     </div>
                     <div id="map-and-query-div" class="tablet:grid-col-4">
                       <!-- <div id="mapping-div" class="panel-body">
