@@ -20,24 +20,25 @@
                 </button>
               </h4>
               <div id="a1" class="usa-accordion__content usa-prose">
+                <div>Use the location parameters to describe the spatial extent of the desired dataset.</div>
                 <div class="grid-row grid-gap">
                   <div class="tablet:grid-col">
                     <div class="form-group">
-                      <label for="countrycode" class="tooltip" :title="countryTooltip"><strong>Country</strong></label>
+                      <label><strong>Country </strong></label><label for="countrycode" class="tooltip" :title="countryTooltip">&#x1F6C8;</label>
                       <div>
                         <select multiple class="form-control" id="countrycode" name="countrycode" data-placeholder="All"
                           style="width: 100%"></select>
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="tooltip" for="statecode" :title="stateTooltip"><strong>State</strong></label>
+                      <label><strong>State </strong></label> <label class="tooltip" for="statecode" :title="stateTooltip">&#x1F6C8;</label>
                       <div>
                         <select multiple class="form-control" id="statecode" name="statecode" data-placeholder="All"
                           style="width: 100%"></select>
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="tooltip" class="control-label" for="countycode" :title="countyTooltip"><strong>County</strong></label>
+                      <label><strong>County </strong></label><label class="tooltip" class="control-label" for="countycode" :title="countyTooltip">&#x1F6C8;</label>
                       <div>
                         <select multiple class="form-control" id="countycode" name="countycode" data-placeholder="All"
                           style="width: 100%"></select>
@@ -47,7 +48,8 @@
                   <div class="tablet:grid-col">
                     <div id="point-location">
                       <div>
-                        <label class="tooltip" :title="pointLocationTooltip"><strong>Point Location</strong></label>
+                        <label><strong>Point Location </strong></label><label class="tooltip" :title="pointLocationTooltip">&#x1F6C8;</label>
+                        <i class="fa fa-info-circle"></i>
                       </div>
                       <div>
                         <div class="form-group">
@@ -58,13 +60,13 @@
                         </div>
                         <div id="miles-label">miles of</div>
                         <div class="form-group">
-                          <label class="control-label" for="lat">Lat</label>
+                          <label class="control-label" for="lat">Latitude</label>
                           <div>
                             <input class="form-control" type="text" name="lat" size="7" id="lat" />
                           </div>
                         </div>
                         <div class="form-group">
-                          <label class="control-label" for="long">Long</label>
+                          <label class="control-label" for="long">Longitude</label>
                           <div>
                             <input class="form-control" type="text" name="long" id="long" />
                           </div>
@@ -78,8 +80,9 @@
                   </div>
                   <!-- bounding box (advanced)-->
                   <!-- <div class="tablet:grid-col">
-                    <div id="bounding-box" class="tooltip" :title="boundingBoxTooltip">
-                      <div><strong>Bounding Box</strong></div>
+                    <div>
+                    <label><strong>Bounding Box </strong></label><label class="tooltip" :title="boundingBoxTooltip">&#x1F6C8;</label>
+                    </div>
                       <div>
                         <div class="form-group">
                           <label class="control-label" for="north">North:</label>
@@ -123,98 +126,100 @@
                 </button>
               </h4>
               <div id="a2" class="usa-accordion__content usa-prose">
+                <div>Use the site and sampling parameters to describe the type of location where desired data was collected and information about the desired data.</div>
                 <div id="site-params">
                   <div class="grid-row grid-gap">
                     <div class="tablet:grid-col">
-                      <div class="tooltip" :title="siteTypeTooltip">
-                        <label class="control-label" for="siteType"><strong>Site Type</strong></label>
+                      <label><strong>Site Type </strong></label><div class="tooltip" :title="siteTypeTooltip">
+                        <label class="control-label" for="siteType">&#x1F6C8;</label>
+                      </div>
                         <div>
                           <select multiple id="siteType" name="siteType" data-placeholder="All"
                             style="width: 90%"></select>
                         </div>
-                      </div>
                       <!-- Org ID, Site ID, and HUC (advanced) -->
-                      <!-- <div class="tooltip" :title="orgIDTooltip">
-                        <label class="control-label" for="organization"><strong>Organization ID</strong></label>
+                      <!-- <label><strong>Organization ID </strong></label><div class="tooltip" :title="orgIDTooltip">
+                        <label class="control-label" for="organization">&#x1F6C8;</label>
+                      </div>
                         <div>
                           <select multiple id="organization" name="organization"
                             data-placeholder="All" style="width: 84%"></select>
                         </div>
                       </div>
-                      <div class="tooltip" data-position="right" :title="siteIDTooltip">
-                        <label class="control-label" for="siteid"><strong>Site ID</strong></label>
+                      <label><strong>Site ID </strong></label><div class="tooltip" data-position="right" :title="siteIDTooltip">
+                        <label class="control-label" for="siteid">&#x1F6C8;</label>
+                      </div>
                         <div>
                           <select multiple id="siteid" name="siteid" data-placeholder="All"
                             style="width: 70%"></select>
                         </div>
+                      <label><strong>HUC </strong></label><div class="tooltip" :title="hucTooltip">
+                        <label class="control-label" for="huc">&#x1F6C8;</label>
                       </div>
-                      <div class="tooltip" :title="hucTooltip">
-                        <label class="control-label" for="huc"><strong>HUC</strong></label>
                         <div>
                           <input class="form-control" type="text" name="huc" id="huc" data-multiple="true" />
-                        </div>
-                      </div> -->
+                        </div> -->
                     </div>
                     <div class="tablet:grid-col">
                       <div id="sampling-params" class="panel panel-default">
                         <div class="panel-body">
                           <div id="sampling" class="subpanel">
                             <div class="subpanel-body">
-                              <div class="tooltip" :title="sampleMediaTooltip">
-                                <label class="control-label" for="sampleMedia"><strong>Sample Media</strong></label>
+                                <label><strong>Sample Media </strong></label><div class="tooltip" :title="sampleMediaTooltip">
+                                <label class="control-label" for="sampleMedia">&#x1F6C8;</label>
+                                </div>
                                 <div>
                                   <select multiple class="form-control" name="sampleMedia" id="sampleMedia"
                                     data-placeholder="All" style="width: 100%"></select>
-                                </div>
                               </div>
-                              <div class="tooltip" :title="charGroupTooltip">
-                                <label class="control-label" for="characteristicType"><strong>Characteristic Group</strong></label>
+                              <label><strong>Characteristic Group </strong></label><div class="tooltip" :title="charGroupTooltip">
+                                <label class="control-label" for="characteristicType">&#x1F6C8;</label>
+                              </div>
                                 <div>
                                   <select multiple class="form-control" name="characteristicType" id="characteristicType"
                                     data-placeholder="All" style="width: 100%"></select>
                                 </div>
-                              </div>
                               <!-- Characteristics, Project ID, Parameter Code, Biological Sampling Parameters (advanced) -->
-                              <!-- <div class="tooltip" :title="characteristicsTooltip">
-                                <label class="control-label" for="characteristicName"><strong>Characteristics</strong></label>
+                              <!-- <label><strong>Characteristics </strong></label><div class="tooltip" :title="characteristicsTooltip">
+                                <label class="control-label" for="characteristicName">&#x1F6C8;</label>
+                              </div>
                                 <div>
                                   <select multiple class="form-control" name="characteristicName" id="characteristicName"
                                     data-placeholder="All" style="width: 100%"></select>
                                 </div>
-                              </div>
   
-                              <div class="tooltip" :title="projectIDTooltip">
-                                <label class="control-label" for="project-code"><strong>Project ID</strong></label>
+                              <label><strong>Project ID </strong></label><div class="tooltip" :title="projectIDTooltip">
+                                <label class="control-label" for="project-code">&#x1F6C8;</label>
+                              </div>
                                 <div>
                                   <select multiple class="form-control" name="project" id="project-code"
                                     data-placeholder="All" style="width: 100%"></select>
                                 </div>
-                              </div>
-                              <div class="tooltip" id="pcode-div" :title="paramCodeTooltip">
-                                <label class="control-label" for="pCode"><strong>Parameter Code</strong>
-                                  <span style="font-size: x-small">(NWIS ONLY)</span></label>
+                              <label><strong>Parameter Code</strong>
+                                  <span style="font-size: x-small">(NWIS ONLY) </span></label><div class="tooltip" id="pcode-div" :title="paramCodeTooltip">
+                                <label class="control-label" for="pCode">&#x1F6C8;</label>
+                                  </div>
                                 <div>
                                   <input class="form-control usa-label" type="text" name="pCode" id="pCode"
                                     data-multiple="true" />
                                 </div>
-                              </div>
                           <div id="biological" class="subpanel">
-                            <div class="tooltip" :title="bioSamplingTooltip">
+                            <label><strong>Biological Sampling Parameters </strong><div class="tooltip" :title="bioSamplingTooltip">
                             <div class="subpanel-heading">
-                              <strong>Biological Sampling Parameters</strong>
+                              &#x1F6C8;
                             </div>
                           </div>
                             <div class="subpanel-body">
-                              <div class="tooltip" :title="assemblageTooltip">
-                                <label for="assemblage"><strong>Assemblage</strong></label>
+                              <label><strong>Assemblage </strong></label><div class="tooltip" :title="assemblageTooltip">
+                                <label for="assemblage">&#x1F6C8;</label>
+                              </div>
                                 <div>
                                   <select multiple name="assemblage" id="assemblage"
                                     data-placeholder="All" style="width: 100%"></select>
                                 </div>
-                              </div>
                               <div class="form-group">
-                                <label class="tooltip" for="subjectTaxonomicName" :title="taxNameTooltip"><strong>Taxonomic
-                                  Name</strong></label>
+                                <label><strong>Taxonomic
+                                  Name </strong></label><label class="tooltip" for="subjectTaxonomicName" :title="taxNameTooltip">&#x1F6C8;</label>
                                 <div>
                                   <select multiple name="subjectTaxonomicName" aria-label="Select a taxonomic name"
                                     id="subject-taxonomic-name" data-placeholder="All" style="width: 100%"></select>
@@ -239,18 +244,19 @@
               </button>
             </h4>
             <div id="a3" class="usa-accordion__content usa-prose">
+              <div>Use the filter parameters to specify the source of data and specific date range for sample results.</div>
               <div>
                 <div id="filter-box" class="grid-row grid-gap">
                   <div id="filter-box-input-div" class="grid-row grid-gap">
-                    <div id="date-row-parameters-div" class="tablet:grid-col-4">
+                    <div id="date-row-parameters-div" class="tablet:grid-col">
                       <div id="date-row">
                         <div id="start-date-select">
-                          <div class="tooltip" :title="dateRangeTooltip">
-                            <label for="startDateLo"><strong>Date range</strong> - from:</label>
+                          <label><strong>Date range </strong></label><div class="tooltip" :title="dateRangeTooltip">
+                            <label for="startDateLo">&#x1F6C8;</label>
                           </div>
                               <div>
                                 <div>
-                                  <input class="form-control usa-label" type="text" id="startDateLo"
+                                  <label>from:</label><input class="form-control usa-label" type="text" id="startDateLo"
                                   name="startDateLo" placeholder="mm-dd-yyyy" />
                                 </div>
                               </div>
@@ -268,21 +274,21 @@
                     </div>
                       <!-- Minimum (advanced) -->
                       <!-- <div id="min-activities-parameters-div" class="tablet:grid-col-4">
-                        <div class="tooltip" id="min-activities-div" :title="minSamplingTooltip">
-                          <label class="control-label" for="min-activities"><strong>Minimum sampling activities per site</strong></label>
+                        <label><strong>Minimum sampling activities per site</strong></label><div class="tooltip" id="min-activities-div" :title="minSamplingTooltip">
+                          <label class="control-label" for="min-activities">&#x1F6C8;</label>
+                        </div>
                           <div>
                             <input class="form-control" type="number" min="1" name="minactivities" id="min-activities" />
                           </div>
-                        </div>
                       </div>
                       <div id="min-results-parameters-div" class="tablet:grid-col-4">
-                        <div class="tooltip" id="minresults-div" :title="minimumResultsTooltip">
-                          <label class="control-label" for="minresults"><strong>Minimum results per site</strong></label>
+                        <label><strong>Minimum results per site</strong></label><div class="tooltip" id="minresults-div" :title="minimumResultsTooltip">
+                          <label class="control-label" for="minresults">&#x1F6C8;</label>
+                        </div>
                           <div>
                             <input class="form-control usa-label" type="number" min="1" name="minresults"
                               id="minresults" />
                           </div>
-                        </div>
                       </div> -->
                     </div>
                   </div>
@@ -299,13 +305,14 @@
               </button>
             </h4>
             <div id="a4" class="usa-accordion__content usa-prose">
+              <div>Use the download parameters to specify download preferences.</div>
               <div>
                 <div id="download-box" class="grid-row grid-gap">
                     <div id="data-type-parameters-div" class="tablet:grid-col-3">
                       <div id="databases-row">
                         <div id="select">
-                          <div class="tooltip" :title="databasesTooltip">
-                            <label for="dataSource"><strong>Data Source</strong></label>
+                          <label><strong>Data Source </strong></label><div class="tooltip" :title="databasesTooltip">
+                            <label for="dataSource">&#x1F6C8;</label>
                           </div>
                           <fieldset class="usa-fieldset">
                             <div class="usa-checkbox">
@@ -329,8 +336,8 @@
                     </div>
                     <div id="download-data-kind-box" class="tablet:grid-col-5">
                       <fieldset class="usa-fieldset">
-                      <div class="tooltip" id="download-data-div" :title="dataDownloadTooltip">
-                        <label class="control-label" for="dataSource"><strong>Data to Download</strong></label>
+                      <label><strong>Data to Download </strong></label><div class="tooltip" id="download-data-div" :title="dataDownloadTooltip">
+                        <label class="control-label" for="dataSource">&#x1F6C8;</label>
                       </div>
                         <!-- <div class="usa-radio">
                           <input class="result-type usa-radio__input" id="organization" type="radio"
@@ -338,8 +345,8 @@
                           <label class="usa-radio__label" for="organization">Organization Data</label>
                         </div> -->
                         <div class="usa-radio">
-                          <input checked="checked" type="radio" class="result-type usa-radio__input" name="download" id="sites"
-                            type="radio" value="sites" />
+                          <input checked="checked" type="radio" class="result-type usa-radio__input" name="downloadType" id="sites"
+                            type="radio" value="Station" />
                           <label class="usa-radio__label" for="sites">Site data only</label>
                         </div>
                         <!-- <div class="usa-radio">
@@ -353,16 +360,16 @@
                             data</label>
                         </div> -->
                         <div class="usa-radio">
-                          <input class="result-type usa-radio__input" name="download" id="samples" type="radio" value="samples" />
+                          <input class="result-type usa-radio__input" name="downloadType" id="samples" type="radio" value="Result" />
                           <label class="usa-radio__label" for="samples">Sample results (physical/chemical
                             metadata)</label>
                         </div>
                         <div class="usa-radio">
-                          <input class="result-type usa-radio__input" name="download" id="biosamples" type="radio" value="biosamples" />
+                          <input class="result-type usa-radio__input" name="downloadType" id="biosamples" type="radio" value="Result" />
                           <label class="usa-radio__label" for="biosamples">Sample results (biological metadata)</label>
                         </div>
                         <div class="usa-radio">
-                          <input class="result-type usa-radio__input" name="download" id="narrowsamples" type="radio" value="narrowsamples" />
+                          <input class="result-type usa-radio__input" name="downloadType" id="narrowsamples" type="radio" value="Result" />
                           <label class="usa-radio__label" for="narrowsamples">Sample results (narrow)</label>
                         </div>
                         <!-- <div class="usa-radio">
@@ -416,8 +423,8 @@
                       </div> -->
                       <div id="download-tabular-data">
                         <fieldset class="usa-fieldset">
-                          <div class="tooltip" :title="fileFormatTooltip">
-                            <label for="dataSource"><strong>File Format</strong></label>
+                          <label><strong>File Format </strong></label><div class="tooltip" :title="fileFormatTooltip">
+                            <label for="dataSource">&#x1F6C8;</label>
                           </div>
                           <div class="usa-radio">
                             <input class="usa-radio__input" id="csv" type="radio" name="mimeType" value="csv"
@@ -436,8 +443,8 @@
                       </div>
                       <div id="download-sorted-data-div">
                         <input class="control-label" type="checkbox" id="sorted" />
-                        <div class="tooltip" :title="sortDataTooltip">
-                          <label class="control-label" for="sorted"><strong>Sort data</strong></label>
+                        <label><strong>Sort data </strong></label><div class="tooltip" :title="sortDataTooltip">
+                          <label class="control-label" for="sorted">&#x1F6C8;</label>
                         </div>
                       <input type="hidden" name="zip" id="zip" value="yes" />
                       <input type="hidden" name="sorted" id="hidden-sorted" value="no" />
