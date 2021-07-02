@@ -254,7 +254,7 @@ export default class DownloadFormView {
                         });
                     }
                 }
-                if (index === length) {
+                if (index === (length - 1)) {
                     result.push({
                         name: 'providers',
                         value: providersArray,

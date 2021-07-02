@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 ## [Unreleased](https://github.com/NWQMC/WQP_UI/compare/WQP_UI-5.24.0...master)
 - Added USWDS tooltips and removed NLDI references
+- Change 'STORET' to 'EPA' on presentation side
 
 ## [5.24.0](https://github.com/NWQMC/WQP_UI/compare/WQP_UI-5.23.0...WQP_UI-5.24.0) - 2021-05-10
 ### Changed

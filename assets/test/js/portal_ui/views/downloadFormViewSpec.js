@@ -29,9 +29,9 @@ describe('Tests for DownloadFormView', function() {
                 '<div id="download-box-input-div"></div>' +
                 '<select id="empty-one", name="empty-one" multiple></select>' +
                 '<input id="empty-two", name="empty-two" type="hidden" />' +
-                '<select id="providers-select" name="provider" multiple><option selected value="S1">Select1</option></select>' +
+                '<input type="checkbox" name="providers" class="datasources usa-checkbox__input" value="S1" checked/>' +
                 '<input type="hidden" name="fake-param" value="Fake1" />' +
-                '<input type="hidden" name="fake-param-with-multi" data-multiple="true" value="Fake2"/>' +
+                '<input type="hidden" name="fake-param-with-multi" data-multiple="true" value="Fake2" />' +
                 '<div id="mapping-div"><input type="hidden" name="map-param" value="Value1" /></div>' +
                 '<button id="main-button" type="submit">Download</button>' +
                 '</form></div>'
@@ -94,27 +94,12 @@ describe('Tests for DownloadFormView', function() {
         expect(providers.fetch).toHaveBeenCalled();
     });
 
-    it('Expects that a successful fetch of the providers initialized the provider select', function() {
-        testView.initialize();
-        expect($.fn.select2).not.toHaveBeenCalled();
-
-        fetchProvidersDeferred.resolve();
-        expect($.fn.select2).toHaveBeenCalled();
-    });
-
-    it('Expects that a failed fetch of the providers does not initialize the select', function() {
-        testView.initialize();
-
-        fetchProvidersDeferred.reject();
-        expect($.fn.select2).not.toHaveBeenCalled();
-    });
-
     it('Expects getQueryParamArray to return the form parameters with name, value, and multiple attributes, omitting those within the mapping-div', function() {
         var result = testView.getQueryParamArray();
         expect(result.length).toBe(3);
         expect(result).toContain({name: 'fake-param', value: 'Fake1', multiple: false});
         expect(result).toContain({name: 'fake-param-with-multi', value: 'Fake2', multiple: true});
-        expect(result).toContain({name: 'provider', value: ['S1'], multiple: false});
+        expect(result).toContain({name: 'providers', value: ['S1'], multiple: false});
     });
 
     describe('Tests for promise returned from initialize', function() {
@@ -217,7 +202,7 @@ describe('Tests for DownloadFormView', function() {
                 multiple: true
             });
             expect(args[1]).toContain({
-                name: 'provider',
+                name: 'providers',
                 value: ['S1'],
                 multiple: false
             });
