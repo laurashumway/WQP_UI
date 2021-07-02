@@ -48,14 +48,16 @@ These are other sources of water quality data that the Water Quality Portal team
 
 [**Pacific Northwest Data Exchange**](https://www.exchangenetwork.net/data-exchange/pacific-northwest-water-quality-exchange/)
 
+![Pacific Northwest Data Exchange Logo](/server/wqp/markdownTextFiles/img/other_portal_links_image13.png)
+
 [**Southern California Coastal Ocean Observing System (SCCOOS)**](https://sccoos.org/products-and-tools/)
 
-![Southern California Coastal Ocean Observing System (SCCOOS) Logo](/server/wqp/markdownTextFiles/img/other_portal_links_image13.png)
+![Southern California Coastal Ocean Observing System (SCCOOS) Logo](/server/wqp/markdownTextFiles/img/other_portal_links_image14.png)
 
 [**Southeast Coastal Ocean  Observing Regional Association (SECOORA)**](http://secoora.org/data)
 
-![Southeast Coastal Ocean  Observing Regional Association (SECOORA) Logo](/server/wqp/markdownTextFiles/img/other_portal_links_image14.png)
+![Southeast Coastal Ocean  Observing Regional Association (SECOORA) Logo](/server/wqp/markdownTextFiles/img/other_portal_links_image15.png)
 
 [**U.S. Integrated Ocean Observing System Program Data Access Page**](http://www.ioos.noaa.gov/data/welcome.html)
 
-![U.S. Integrated Ocean Observing System Program Data Access Page Logo](/server/wqp/markdownTextFiles/img/other_portal_links_image15.png)
+![U.S. Integrated Ocean Observing System Program Data Access Page Logo](/server/wqp/markdownTextFiles/img/other_portal_links_image16.png)

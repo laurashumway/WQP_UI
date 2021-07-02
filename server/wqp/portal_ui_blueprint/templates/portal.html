@@ -21,31 +21,33 @@
               </h4>
               <div id="a1" class="usa-accordion__content usa-prose">
                 <div>Use the location parameters to describe the spatial extent of the desired dataset.</div>
+                <br>
                 <div class="grid-row grid-gap">
                   <div class="tablet:grid-col">
                     <div class="form-group">
                       <label><strong>Country </strong></label><label for="countrycode" class="tooltip" :title="countryTooltip">&#x1F6C8;</label>
                       <div>
-                        <select multiple class="form-control" id="countrycode" name="countrycode" data-placeholder="All"
-                          style="width: 100%"></select>
+                        <select multiple class="form-control" id="countrycode" name="countrycode" data-placeholder="Optional"
+                          style="width: 66%"></select>
                       </div>
                     </div>
+                    <br>
                     <div class="form-group">
                       <label><strong>State </strong></label> <label class="tooltip" for="statecode" :title="stateTooltip">&#x1F6C8;</label>
                       <div>
-                        <select multiple class="form-control" id="statecode" name="statecode" data-placeholder="All"
-                          style="width: 100%"></select>
+                        <select multiple class="form-control" id="statecode" name="statecode" data-placeholder="Optional"
+                          style="width: 66%"></select>
                       </div>
                     </div>
+                    <br>
                     <div class="form-group">
                       <label><strong>County </strong></label><label class="tooltip" class="control-label" for="countycode" :title="countyTooltip">&#x1F6C8;</label>
                       <div>
-                        <select multiple class="form-control" id="countycode" name="countycode" data-placeholder="All"
-                          style="width: 100%"></select>
+                        <select multiple class="form-control" id="countycode" name="countycode" data-placeholder="Optional"
+                          style="width: 66%"></select>
                       </div>
                     </div>
-                  </div>
-                  <div class="tablet:grid-col">
+                    <br>
                     <div id="point-location">
                       <div>
                         <label><strong>Point Location </strong></label><label class="tooltip" :title="pointLocationTooltip">&#x1F6C8;</label>
@@ -55,20 +57,20 @@
                         <div class="form-group">
                           <label class="control-label" for="within">Within</label>
                           <div>
-                            <input class="form-control" type="text" name="within" id="within" />
+                            <input class="form-control" type="text" name="within" size="15" id="within" placeholder="Optional" />
                           </div>
                         </div>
                         <div id="miles-label">miles of</div>
                         <div class="form-group">
                           <label class="control-label" for="lat">Latitude</label>
                           <div>
-                            <input class="form-control" type="text" name="lat" size="7" id="lat" />
+                            <input class="form-control" type="text" name="lat" size="15" id="lat" placeholder="Optional" />
                           </div>
                         </div>
                         <div class="form-group">
                           <label class="control-label" for="long">Longitude</label>
                           <div>
-                            <input class="form-control" type="text" name="long" id="long" />
+                            <input class="form-control" type="text" name="long" size="15" id="long" placeholder="Optional" />
                           </div>
                         </div>
                         <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
@@ -134,8 +136,8 @@
                         <label class="control-label" for="siteType">&#x1F6C8;</label>
                       </div>
                         <div>
-                          <select multiple id="siteType" name="siteType" data-placeholder="All"
-                            style="width: 90%"></select>
+                          <select multiple id="siteType" name="siteType" data-placeholder="Optional"
+                            style="width: 66%"></select>
                         </div>
                       <!-- Org ID, Site ID, and HUC (advanced) -->
                       <!-- <label><strong>Organization ID </strong></label><div class="tooltip" :title="orgIDTooltip">
@@ -159,8 +161,6 @@
                         <div>
                           <input class="form-control" type="text" name="huc" id="huc" data-multiple="true" />
                         </div> -->
-                    </div>
-                    <div class="tablet:grid-col">
                       <div id="sampling-params" class="panel panel-default">
                         <div class="panel-body">
                           <div id="sampling" class="subpanel">
@@ -170,14 +170,14 @@
                                 </div>
                                 <div>
                                   <select multiple class="form-control" name="sampleMedia" id="sampleMedia"
-                                    data-placeholder="All" style="width: 100%"></select>
+                                    data-placeholder="Optional" style="width: 66%"></select>
                               </div>
                               <label><strong>Characteristic Group </strong></label><div class="tooltip" :title="charGroupTooltip">
                                 <label class="control-label" for="characteristicType">&#x1F6C8;</label>
                               </div>
                                 <div>
                                   <select multiple class="form-control" name="characteristicType" id="characteristicType"
-                                    data-placeholder="All" style="width: 100%"></select>
+                                    data-placeholder="Optional" style="width: 66%"></select>
                                 </div>
                               <!-- Characteristics, Project ID, Parameter Code, Biological Sampling Parameters (advanced) -->
                               <!-- <label><strong>Characteristics </strong></label><div class="tooltip" :title="characteristicsTooltip">
@@ -251,22 +251,21 @@
                     <div id="date-row-parameters-div" class="tablet:grid-col">
                       <div id="date-row">
                         <div id="start-date-select">
-                          <label><strong>Date range </strong></label><div class="tooltip" :title="dateRangeTooltip">
+                          <label><strong>Date range </strong>(mm/dd/yyyy) </label><div class="tooltip" :title="dateRangeTooltip">
                             <label for="startDateLo">&#x1F6C8;</label>
                           </div>
                               <div>
                                 <div>
-                                  <label>from:</label><input class="form-control usa-label" type="text" id="startDateLo"
-                                  name="startDateLo" placeholder="mm-dd-yyyy" />
+                                  <label>from: </label><input class="form-control" type="text" id="startDateLo"
+                                  name="startDateLo" placeholder="Optional" />
                                 </div>
                               </div>
                             </div>
                         <div id="end-date-select">
-                          <label class="control-label" for="startDateHi">to:</label>
                           <div>
                             <div>
-                              <input class="form-control usa-label" type="text" id="startDateHi"
-                                name="startDateHi" placeholder="mm-dd-yyyy" />
+                              <label class="control-label" for="startDateHi">to: </label> <input class="form-control" type="text" id="startDateHi"
+                                name="startDateHi" placeholder="Optional" />
                             </div>
                           </div>
                         </div>

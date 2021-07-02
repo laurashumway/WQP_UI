@@ -19,7 +19,7 @@
 [**Download all Water Quality Exchange (WQX) allowable value lists and definitions**](/server/wqp/markdownTextFiles/portal_userguide.md#water-quality-exchange-allowable-value-lists-and-definitions)
 
 The ***Water Quality Data Portal (WQP)*** provides an easy way to access data stored in three large water quality databases. Input parameters on the [form](https://www.waterqualitydata.us/portal/) include *location*, *site*, *sampling*, and *date* parameters. The WQP can return ***site information*** (locations where samples were collected), or it can return ***sample results*** (analytical data of collected samples). Any field in the form left blank will cause a search for **all** parameters in that field. 
->Example: If a user selects US and California for the *country* and *state* respectively, but leaves the *county* field blank, data will be returned for **all** counties in California. All data will also be returned for the fields under *SITE PARAMETERS* and *SAMPLING PARAMETERS*.
+>*Example:* If a user selects US and California for the *country* and *state* respectively, but leaves the *county* field blank, data will be returned for **all** counties in California. All data will also be returned for the fields under *SITE PARAMETERS* and *SAMPLING PARAMETERS*.
 
 The same inputs parameters can be used to make data retrievals using web services. For more information and examples on accessing the web services, see the [Web Services Guide](https://www.waterqualitydata.us/webservices_documentation/). 
 
@@ -62,25 +62,6 @@ The WQP can be searched through three different search options:
 > * Latitude: 46.12
 > * Longitude: -89.15
 
-<details>
-  <summary>Advanced Location Parameters</summary>
-
-***Bounding Box*** - Enter the North and South *latitudes* and the East and West *longitudes* (**decimal degrees** referenced to NAD83) to create a ***bounding box***. Longitudes in the western hemisphere should begin with a negative sign.
-
-> *Example:*
-> * North: 46.12
-> * East: -89.15
-> * South: 45.93
-> * West: -89.68
-
-</details>
-
-</details>
-
-#### **SITE PARAMETERS**
-<details>
-  <summary>Expand Parameters</summary>
-
 ***Site Type***  - ***Site type*** indicates a *natural* or *human-made* feature affecting the hydrologic conditions measured at a site. Use the **site type window** to select one or multiple site types. Parentheses after each site type represent which database(s) it is represented in. ***Table 1*** includes a definition for each available site type.
 
 #### ***Table 1.* Available site types and definitions**
@@ -109,7 +90,15 @@ The WQP can be searched through three different search options:
 </details>
 
 <details>
-  <summary>Advanced Sites Parameters</summary>
+  <summary>Advanced Location Parameters</summary>
+
+***Bounding Box*** - Enter the North and South *latitudes* and the East and West *longitudes* (**decimal degrees** referenced to NAD83) to create a ***bounding box***. Longitudes in the western hemisphere should begin with a negative sign.
+
+> *Example:*
+> * North: 46.12
+> * East: -89.15
+> * South: 45.93
+> * West: -89.68
 
 ***Organization ID*** - Identifies a unique ***business*** or ***company***. Use the **organization ID window** to select one or multiple organization IDs. Type at least two characters for a list to appear. For more information on Water Quality Exchange (WQX) Organization IDs, see [About EPA/WQX](https://www.epa.gov/waterdata/water-quality-data).
 
@@ -130,9 +119,13 @@ The WQP can be searched through three different search options:
 
 </details>
 
-#### **SAMPLING PARAMETERS**
+#### **FILTER RESULTS**
 <details>
   <summary>Expand Parameters</summary>
+
+***Data Source*** - Select one or multiple ***databases*** from which the data will be retrieved. **All** databases are searched by default.
+
+***Date Range*** - ***Start*** and ***end dates*** to be used individually or together. Dates must be entered in *MM-DD-YYYY* format.
 
 ***Sample Media*** - Identifies the ***environmental medium*** where a sample was taken. Use the **sample media window** to select one or multiple sample media types. Parentheses after each sample medium represent which database(s) it is represented in. ***Table 2*** includes a definition for each sample medium that is available.
 
@@ -156,7 +149,11 @@ The WQP can be searched through three different search options:
 ***Characteristic Group*** - Groups types of ***environmental measurements***. Use the **characteristic group window** to select one or multiple characteristic groups. Parentheses after each characteristic group represent which database(s) it is represented in. A complete listing of which characteristic matches to which characteristic group [is available for download](http://cdx.epa.gov/wqx/download/DomainValues/Characteristic_CSV.zip).
 
 <details>
-  <summary>Advanced Sampling Parameters</summary>
+  <summary>Advanced Results Filters</summary>
+
+***Minimum sampling activities per site*** - Returns only sites where at least a ***minimum number*** of sampling activities have been reported. Use the **minimum number window** to select a value; the default is **1**.
+
+***Minimum result per site*** - Returns only sites where at least a ***minimum number*** of results have been reported. Use the **minimum results window** to select a value; the default is **1**.
 
 ***Characteristic*** - Identifies types of ***environmental measurements***. Use the **characteristics window** to select one or multiple characteristics. Parentheses after each characteristic represent which database(s) it is represented in. The names are derived from the USEPA [Substance Registry System (SRS)](http://iaspub.epa.gov/sor_internet/registry/substreg/home/overview/home.do). USGS uses parameter codes for the same purpose and has [associated most parameters to SRS names](http://www.waterqualitydata.us/public_srsnames.jsp).
 
@@ -180,39 +177,11 @@ Small differences in naming may cause chemically identical characteristics to be
 
 </details>
 
-#### **FILTER RESULTS**
-<details>
-  <summary>Expand Parameters</summary>
-
-***Date Range*** - ***Start*** and ***end dates*** to be used individually or together. Dates must be entered in *MM-DD-YYYY* format.
-
-***Minimum sampling activities per site*** - Returns only sites where at least a ***minimum number*** of sampling activities have been reported. Use the **minimum number window** to select a value; the default is **1**.
-
-***Minimum result per site*** - Returns only sites where at least a ***minimum number*** of results have been reported. Use the **minimum results window** to select a value; the default is **1**.
-
-</details>
-
 #### **DOWNLOAD THE DATA**
 <details>
   <summary>Expand Section</summary>
 
-***Data Source*** - Select one or multiple ***databases*** from which the data will be retrieved. **All** databases are searched by default.
-
-***Data to Download*** - ***Water monitoring data*** is delivered in a format and nomenclature defined by the [WQX-Outbound Schema](http://www.exchangenetwork.net/schema/WQX/2/WQX_DET_v2.1b.xls). *Metadata* on these formats is displayed in ***Tables 4-12***.
-
-***Show Sites on Map*** - Previews the ***locations of sites*** **before** downloading the data, up to 250,000 sites. Sites are color coded by data source. 
-
-The example below displays part of the South Skunk watershed, with NWIS, EPA, and STEWARDS sites.
-
-![Result of clicking "Show sites on map" button](/server/wqp/markdownTextFiles/img/portal_userguide_image1.png)
-
-For additional information about the sites, click on individual sites. Use the box tool below the zoom buttons to select multiple sites.
-
-![Additional information about sites](/server/wqp/markdownTextFiles/img/portal_userguide_image2.png)
-
-The Water Quality Portal only provides discrete monitoring data. To see USGS long-term flow monitoring sites, click the layer picker on the upper right and toggle on "NWIS Stream Gages". These gage locations are based on the [GAGES-II dataset](http://water.usgs.gov/GIS/metadata/usgswrd/XML/gagesII_Sept2011.xml), which only runs through 2009. Some gages are now discontinued and other gage data may be more accurate.
-
-![NWIS Stream Gages](/server/wqp/markdownTextFiles/img/portal_userguide_image3.png)
+***Data Type*** - ***Water monitoring data*** is delivered in a format and nomenclature defined by the [WQX-Outbound Schema](http://www.exchangenetwork.net/schema/WQX/2/WQX_DET_v2.1b.xls). *Metadata* on these formats is displayed in ***Tables 4-12***.
 
 ***File Format*** - Choose a ***file format*** to download the result set. Four available formats are listed and described in ***Table 3***.
 
@@ -231,6 +200,25 @@ The Water Quality Portal only provides discrete monitoring data. To see USGS lon
 
 ***Sort Data*** - ***Sorts data*** by *organization*, *monitoringLocationID*, and *activityID*. Sorting **increases** response time. If you are manually sorting, set **sorted=no**. The sorted document is delivered in the WQX standard.
 
+<details>
+  <summary>Advanced Download Parameters</summary>
+
+***Show Sites on Map*** - Previews the ***locations of sites*** **before** downloading the data, up to 250,000 sites. Sites are color coded by data source. 
+
+The example below displays part of the South Skunk watershed, with NWIS, EPA, and STEWARDS sites.
+
+![Result of clicking "Show sites on map" button](/server/wqp/markdownTextFiles/img/portal_userguide_image1.png)
+
+For additional information about the sites, click on individual sites. Use the box tool below the zoom buttons to select multiple sites.
+
+![Additional information about sites](/server/wqp/markdownTextFiles/img/portal_userguide_image2.png)
+
+The Water Quality Portal only provides discrete monitoring data. To see USGS long-term flow monitoring sites, click the layer picker on the upper right and toggle on "NWIS Stream Gages". These gage locations are based on the [GAGES-II dataset](http://water.usgs.gov/GIS/metadata/usgswrd/XML/gagesII_Sept2011.xml), which only runs through 2009. Some gages are now discontinued and other gage data may be more accurate.
+
+![NWIS Stream Gages](/server/wqp/markdownTextFiles/img/portal_userguide_image3.png)
+
+</details>
+
 </details>
 
 ### **Explanation of data retrievals**
@@ -240,14 +228,16 @@ Water monitoring data is delivered in a format and nomenclature defined by the [
 Under *"DOWNLOAD DATA"*, the data can be retrieved in the following formats:
 
 * [Site Data Only](/server/wqp/markdownTextFiles/portal_userguide.md#table-4-site-data-only-result-retrieval-metadata)
-* [Project Data Only](/server/wqp/markdownTextFiles/portal_userguide.md#table-5-project-data-only-result-retrieval-metadata)
-* [Project Monitoring Location Weighting](/server/wqp/markdownTextFiles/portal_userguide.md#table-6-project-monitoring-location-weighting-result-retrieval-metadata)
+* [Project Data Only](/server/wqp/markdownTextFiles/portal_userguide.md#table-5-project-data-only-result-retrieval-metadata)*
+* [Project Monitoring Location Weighting](/server/wqp/markdownTextFiles/portal_userguide.md#table-6-project-monitoring-location-weighting-result-retrieval-metadata)*
 * [Sample Results (Physical/Chemical)](/server/wqp/markdownTextFiles/portal_userguide.md#table-7-sample-results-physicalchemical-result-retrieval-metadata)
 * [Sample Results (Biological)](/server/wqp/markdownTextFiles/portal_userguide.md#table-8-sample-results-biological-result-retrieval-metadata)
 * [Sample Results (Narrow)](/server/wqp/markdownTextFiles/portal_userguide.md#table-9-sample-results-narrow-result-retrieval-metadata)
-* [Sampling Activity](/server/wqp/markdownTextFiles/portal_userguide.md#table-10-sampling-activity-result-retrieval-metadata)
-* [Sampling Activity Metrics](/server/wqp/markdownTextFiles/portal_userguide.md#table-11-sampling-activity-metrics-result-retrieval-metadata)
-* [Result Detection Quantitation Limit Data](/server/wqp/markdownTextFiles/portal_userguide.md#table-12-result-detection-quantitation-limit-data-result-retrieval-metadata)
+* [Sampling Activity](/server/wqp/markdownTextFiles/portal_userguide.md#table-10-sampling-activity-result-retrieval-metadata)*
+* [Sampling Activity Metrics](/server/wqp/markdownTextFiles/portal_userguide.md#table-11-sampling-activity-metrics-result-retrieval-metadata)*
+* [Result Detection Quantitation Limit Data](/server/wqp/markdownTextFiles/portal_userguide.md#table-12-result-detection-quantitation-limit-data-result-retrieval-metadata)*
+
+*Available only in the advanced form
 
 The tables below list the metadata for each retrieval type.
 
