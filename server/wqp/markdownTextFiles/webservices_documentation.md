@@ -4,7 +4,7 @@
 * [Web Service Request Examples](/server/wqp/markdownTextFiles/webservices_documentation.md#web-service-request-examples)
 * [Looking Up Domain Values through Web Services](/server/wqp/markdownTextFiles/webservices_documentation.md#looking-up-domain-values-through-web-services)
 
-The Water Quality Data Portal (WQP) provides easy access to data stored in three large water quality databases through form-based queries or standalone web services. The form interface and the web services offer equivalent input parameters and output formats. Submit a web service request to bypass the WQP form interface. For more information on the WQP input parameters and data retrievals, see the [User Guide](http://www.waterqualitydata.us/portal_userguide.jsp).  
+The Water Quality Data Portal (WQP) provides easy access to data stored in three large water quality databases through form-based queries or standalone web services. Submit a web service request to bypass the WQP form interface. This functionality can be used to share data queries simply with external partners or incorporate into applications. The form interface and the web services offer equivalent input parameters and output formats.  For more information on the WQP input parameters and data retrievals, see the [User Guide](http://www.waterqualitydata.us/portal_userguide.jsp).  
 
 ### **Using a web service client**
 
